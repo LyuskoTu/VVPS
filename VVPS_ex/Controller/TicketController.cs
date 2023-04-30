@@ -35,7 +35,7 @@ namespace MVCTest.Controller
         [MenuName(ADD_TICKET)]
         public IView Add()
         {
-            Ticket val = (Ticket)Activator.CreateInstance(typeof(Ticket));
+            Ticket val = new();
             List<string> list = _db.Properties<Ticket>();
             foreach (string item in list)
             {
